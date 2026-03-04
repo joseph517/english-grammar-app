@@ -1,0 +1,9 @@
+<button
+      class="topic-card"
+      [class.active]="isActive()"
+      [style.--card-color]="topic().color"
+      (click)="selected.emit(topic())">
+      <span class="icon">{{ topic().icon }}</span>
+      <span class="title">{{ topic().title }}</span>
+      <span class="subtitle">{{ topic().subtitle }}</span>
+    </button>

@@ -1,0 +1,153 @@
+// verb-to-be / prepositions / past-tenses / nouns
+// Import in each feature component with:
+// @use '../../../shared/styles/topic-page' as *;
+// To use styles from topic-page component in each feature component.
+
+// ─── Main layout ────────────────────────────────────────
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+// ─── Mobile overlay (when sidebar is open) ──────────────────
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 40;
+  backdrop-filter: blur(2px);
+
+  &.visible {
+    display: block;
+  }
+}
+
+// ─── Sidebar ─────────────────────────────────────────────────
+.sidebar {
+  width: var(--sidebar-width);
+  background: var(--bg-sidebar);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 50;
+  transition: transform 0.3s ease;
+
+  // ── Brand ──
+  .brand {
+    padding: 24px 20px 16px;
+    border-bottom: 1px solid var(--border);
+
+    small {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: var(--text-muted);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      line-height: 1.25;
+
+      span {
+        color: var(--text-secondary);
+        font-weight: 400;
+      }
+    }
+
+    p {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+  }
+
+  // ── Nav ──
+  .nav-list {
+    flex: 1;
+    padding: 12px 8px;
+    overflow-y: auto;
+  }
+
+  // ── Footer ──
+  .sidebar-footer {
+    padding: 14px 16px;
+    border-top: 1px solid var(--border);
+    font-size: 11px;
+    color: var(--text-tiny);
+    text-align: center;
+  }
+}
+
+// ─── Hamburger button (only mobile) ──────────────────────────
+.menu-toggle {
+  display: none;
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  z-index: 60;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  color: var(--text-primary);
+  border-radius: 10px;
+  width: 42px;
+  height: 42px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+
+  &:hover {
+    background: var(--bg-card-hover);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+// ─── Main content ──────────────────────────────────────
+.content {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+// ─── Responsive ──────────────────────────────────────────────
+
+// Tablet
+@media (max-width: 1024px) {
+  :root {
+    --sidebar-width: 220px;
+  }
+}
+
+// Mobile
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+
+    &.open {
+      transform: translateX(0);
+      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .content {
+    margin-left: 0;
+    padding-top: 64px;
+  }
+}

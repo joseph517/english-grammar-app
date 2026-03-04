@@ -1,0 +1,47 @@
+.topic-card {
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 10px;
+  margin-bottom: 4px;
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: block;
+
+  .icon {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .title {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #94A3B8;
+    transition: color 0.2s;
+  }
+
+  .subtitle {
+    display: block;
+    font-size: 0.7rem;
+    color: #475569;
+    margin-top: 1px;
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.08);
+
+    .title { color: #CBD5E1; }
+  }
+
+  &.active {
+    background: color-mix(in srgb, var(--card-color) 15%, transparent);
+    border-color: color-mix(in srgb, var(--card-color) 35%, transparent);
+
+    .title { color: var(--card-color); }
+  }
+}

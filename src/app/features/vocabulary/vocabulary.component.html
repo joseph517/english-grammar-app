@@ -1,0 +1,78 @@
+<div class="topic-page">
+
+  <header class="topic-header" [style.--topic-color]="topic.color">
+    <span class="topic-icon">{{ topic.icon }}</span>
+    <h2>{{ topic.title }}</h2>
+    <p>{{ topic.subtitle }}</p>
+  </header>
+
+  <div class="sections">
+
+    <section class="section-card">
+      <h3>{{ topic.sections[0].heading }}</h3>
+      <p class="section-content">{{ topic.sections[0].content }}</p>
+
+      @if (topic.sections[0].table) {
+        <app-grammar-table [data]="topic.sections[0].table" />
+      }
+    </section>
+
+    <section class="section-card">
+      <h3>{{ topic.sections[1].heading }}</h3>
+      <p class="section-content">{{ topic.sections[1].content }}</p>
+
+      <div class="search-wrapper">
+        <div class="search-input-wrapper">
+          <span class="search-icon">🔍</span>
+          <input
+            type="text"
+            placeholder="Buscar por cualquier forma o significado..."
+            [value]="searchTerm()"
+            (input)="onSearch($event)"
+            class="search-input"
+          />
+          @if (searchTerm()) {
+            <button class="clear-btn" (click)="clearSearch()">✕</button>
+          }
+        </div>
+        <span class="results-count">
+          {{ filteredVerbs().length }} / {{ topic.sections[1].irregularVerbs?.length }} verbos
+        </span>
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Base</th>
+              <th>Pasado Simple</th>
+              <th>Presente Continuo</th>
+              <th>Pasado Continuo</th>
+              <th>Ejemplo</th>
+            </tr>
+          </thead>
+          <tbody>
+            @if (filteredVerbs().length > 0) {
+              @for (verb of filteredVerbs(); track verb.base) {
+                <tr>
+                  <td class="verb-base">{{ verb.base }}</td>
+                  <td class="verb-form">{{ verb.pastSimple }}</td>
+                  <td class="verb-form">{{ verb.presentContinuous }}</td>
+                  <td class="verb-form">{{ verb.pastContinuous }}</td>
+                  <td class="verb-example">{{ verb.example }}</td>
+                </tr>
+              }
+            } @else {
+              <tr>
+                <td colspan="5" class="no-results">
+                  No se encontraron verbos con "{{ searchTerm() }}"
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+  </div>
+</div>
