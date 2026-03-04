@@ -10,7 +10,25 @@ export const TOPICS: Topic[] = [
     route: '/verb-to-be',
     sections: [
       {
+        heading: '🔹 Usos del verbo BE',
+        table: {
+          headers: ['Usos', 'Ejemplo'],
+          rows: [
+            ['Feeling and emotion', 'I am happy.'],
+            ['Personal information', "I'm Joseph."],
+            ['Description', 'He is tall.'],
+            ['Ocupations', 'She is a doctor.'],
+            ['Location', 'It is in the kitchen.'],
+            ['Time', 'It is 5:00.'],
+            ['Nationalities', 'They are from Spain.'],
+            ['State', 'It is in good condition.'],
+            ['Age', 'She is 25 years old.'],
+          ]
+        }
+      },
+      {
         heading: '🔹 Formas del verbo TO BE en presente',
+        content: 'Sujeto + am/is/are + complemento',
         table: {
           headers: ['Pronombre', 'Forma', 'Contracción', 'Ejemplo'],
           rows: [
@@ -42,6 +60,49 @@ export const TOPICS: Topic[] = [
           { q: 'Are they happy?', a: "Yes, they are. / No, they aren't." },
         ],
       },
+      {
+        heading: '🔹 Pasado simple del verbo BE',
+        content: 'Sujeto + was/were + complemento',
+        table: {
+          headers: ['Afirmativo', 'Negativo', 'Contracción'],
+          rows: [
+            ['I was happy.', 'I was not happy.', "I wasn't happy."],
+            ['She was here.', 'She was not here.', "She wasn't here."],
+            ['They were home.', 'They were not home.', "They weren't home."],
+            ['It was sunny yesterday.', 'It was not sunny yesterday.', "It wasn't sunny yesterday."],
+          ],
+        },
+      },
+      {
+        heading: '🔹 Yes/No questions',
+        content: 'Was/Were + Sujeto + complemento + ?',
+        examples: [
+          { q: 'Was I late?', a: "Yes, I was. / No, I wasn't." },
+          { q: 'Was he a doctor?', a: "Yes, he was. / No, he wasn't." },
+          { q: 'Were they happy?', a: "Yes, they were. / No, they weren't." },
+        ]
+      },
+      {
+        heading: '🔹 Wh-Questions',
+        content: 'Wh-Word + Sujeto + was/were + complemento',
+        examples: [
+          { q: 'Where were they last saturday?', a: 'They were at home.' },
+          { q: 'When was she in europe', a: 'She was in europe last year.' },
+          { q: 'Who was that person?', a: 'That person was a doctor.' },
+        ]
+      },
+      {
+        heading: '🔹 Expresiones de tiempo',
+        content: 'Sujeto + was/were +  lugar + expresión de tiempo',
+        table: {
+          headers: ['Ago', 'Last', 'Yester',],
+          rows: [
+            ['I was in school last year.', 'I was in school ago.', 'I was in school yesterday.', ''],
+            ['She was in school last year.', 'She was in school ago.', 'She was in school yesterday.', ''],
+            ['They were in school last year.', 'They were in school ago.', 'They were in school yesterday.', ''],
+          ],
+        }
+      }
     ],
   },
   {
