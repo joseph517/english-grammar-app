@@ -1,0 +1,53 @@
+<div class="topic-page">
+  <header class="topic-header" [style.--topic-color]="topic!.color">
+    <span class="topic-icon">{{ topic!.icon }}</span>
+    <h2>{{ topic!.title }}</h2>
+    <p>{{ topic!.subtitle }}</p>
+  </header>
+
+  <div class="sections">
+    @for (section of topic!.sections; track $index) {
+      <section class="section-card">
+        <h3>{{ section.heading }}</h3>
+
+        @if (section.content) {
+          <p class="section-content">{{ section.content }}</p>
+        }
+
+        @if (section.table) {
+          <app-grammar-table [data]="section.table" />
+        }
+
+        @if (section.examples) {
+          <div class="examples-list">
+            @for (ex of section.examples; track $index) {
+              <div class="example-item">
+                <span class="question">{{ ex.q }}</span>
+                <span class="answer">{{ ex.a }}</span>
+              </div>
+            }
+          </div>
+        }
+
+        @if (section.examples_simple) {
+          <ul class="simple-list">
+            @for (ex of section.examples_simple; track $index) {
+              <li>{{ ex }}</li>
+            }
+          </ul>
+        }
+
+        @if (section.list) {
+          <div class="label-list">
+            @for (item of section.list; track $index) {
+              <div class="label-item">
+                <span class="label">{{ item.label }}</span>
+                <span class="example">{{ item.example }}</span>
+              </div>
+            }
+          </div>
+        }
+      </section>
+    }
+  </div>
+</div>

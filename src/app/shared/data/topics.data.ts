@@ -4,15 +4,15 @@ export const TOPICS: Topic[] = [
   {
     id: 'verb-to-be',
     icon: '🔵',
-    title: 'Verbo "To Be"',
-    subtitle: 'Presente, negativa e interrogativa',
+    title: 'Verb Be',
+    subtitle: 'uses, forms and contractions',
     color: '#3B82F6',
     route: '/verb-to-be',
     sections: [
       {
-        heading: '🔹 Usos del verbo BE',
+        heading: 'Uses',
         table: {
-          headers: ['Usos', 'Ejemplo'],
+          headers: ['Uses', 'Example'],
           rows: [
             ['Feeling and emotion', 'I am happy.'],
             ['Personal information', "I'm Joseph."],
@@ -23,14 +23,14 @@ export const TOPICS: Topic[] = [
             ['Nationalities', 'They are from Spain.'],
             ['State', 'It is in good condition.'],
             ['Age', 'She is 25 years old.'],
-          ]
-        }
+          ],
+        },
       },
       {
-        heading: '🔹 Formas del verbo TO BE en presente',
-        content: 'Sujeto + am/is/are + complemento',
+        heading: 'Present',
+        content: 'Pronoun + am/is/are + complement',
         table: {
-          headers: ['Pronombre', 'Forma', 'Contracción', 'Ejemplo'],
+          headers: ['Pronoun', 'Form', 'Contraction', 'Example'],
           rows: [
             ['I', 'am', "'m", 'I am a student.'],
             ['You', 'are', "'re", 'You are my friend.'],
@@ -40,10 +40,10 @@ export const TOPICS: Topic[] = [
         },
       },
       {
-        heading: '🔹 Forma Negativa',
-        content: 'Sujeto + am/is/are + NOT + complemento',
+        heading: 'Negative Form',
+        content: 'Pronoun + am/is/are + NOT + complement',
         table: {
-          headers: ['Afirmativo', 'Negativo', 'Contracción'],
+          headers: ['Affirmative', 'Negative', 'Contraction'],
           rows: [
             ['I am happy.', 'I am not happy.', "I'm not happy."],
             ['She is here.', 'She is not here.', "She isn't here."],
@@ -52,8 +52,8 @@ export const TOPICS: Topic[] = [
         },
       },
       {
-        heading: '🔹 Forma Interrogativa',
-        content: 'Am/Is/Are + Sujeto + complemento + ?',
+        heading: '🔹 Yes/No questions (present)',
+        content: 'Am/Is/Are + Pronoun + complement + ?',
         examples: [
           { q: 'Am I late?', a: "Yes, you are. / No, you aren't." },
           { q: 'Is he a doctor?', a: "Yes, he is. / No, he isn't." },
@@ -61,48 +61,174 @@ export const TOPICS: Topic[] = [
         ],
       },
       {
-        heading: '🔹 Pasado simple del verbo BE',
-        content: 'Sujeto + was/were + complemento',
+        heading: '🔹 Wh-Questions (present)',
+        content: 'Am/Is/Are + Pronoun + ?',
+        examples: [
+          { q: 'Who is he?', a: "He's my classmate." },
+          { q: 'What is your name?', a: "My name's Jose." },
+          { q: 'Where are you from?', a: "I'm from Spain." },
+        ],
+      },
+      {
+        heading: 'Past Simple',
+        content: 'Pronoun + was/were + complement',
         table: {
-          headers: ['Afirmativo', 'Negativo', 'Contracción'],
+          headers: ['Affirmative', 'Negative', 'Contraction'],
           rows: [
             ['I was happy.', 'I was not happy.', "I wasn't happy."],
             ['She was here.', 'She was not here.', "She wasn't here."],
             ['They were home.', 'They were not home.', "They weren't home."],
-            ['It was sunny yesterday.', 'It was not sunny yesterday.', "It wasn't sunny yesterday."],
+            [
+              'It was sunny yesterday.',
+              'It was not sunny yesterday.',
+              "It wasn't sunny yesterday.",
+            ],
           ],
         },
       },
       {
-        heading: '🔹 Yes/No questions',
-        content: 'Was/Were + Sujeto + complemento + ?',
+        heading: '🔹 Yes/No questions (past)',
+        content: 'Was/Were + Pronoun + complement + ?',
         examples: [
           { q: 'Was I late?', a: "Yes, I was. / No, I wasn't." },
           { q: 'Was he a doctor?', a: "Yes, he was. / No, he wasn't." },
           { q: 'Were they happy?', a: "Yes, they were. / No, they weren't." },
-        ]
+        ],
       },
       {
-        heading: '🔹 Wh-Questions',
-        content: 'Wh-Word + Sujeto + was/were + complemento',
+        heading: '🔹 Wh-Questions (past)',
+        content: 'Wh-Word + was/were + Pronoun + complement',
         examples: [
           { q: 'Where were they last saturday?', a: 'They were at home.' },
           { q: 'When was she in europe', a: 'She was in europe last year.' },
           { q: 'Who was that person?', a: 'That person was a doctor.' },
-        ]
+        ],
       },
       {
         heading: '🔹 Expresiones de tiempo',
-        content: 'Sujeto + was/were +  lugar + expresión de tiempo',
+        content: 'Pronoun + was/were +  place + time expression',
         table: {
-          headers: ['Ago', 'Last', 'Yester',],
+          headers: ['Ago', 'Last', 'Yester'],
           rows: [
-            ['I was in school last year.', 'I was in school ago.', 'I was in school yesterday.', ''],
-            ['She was in school last year.', 'She was in school ago.', 'She was in school yesterday.', ''],
-            ['They were in school last year.', 'They were in school ago.', 'They were in school yesterday.', ''],
+            [
+              'I was in school last year.',
+              'I was in school ago.',
+              'I was in school yesterday.',
+              '',
+            ],
+            [
+              'She was in school last year.',
+              'She was in school ago.',
+              'She was in school yesterday.',
+              '',
+            ],
+            [
+              'They were in school last year.',
+              'They were in school ago.',
+              'They were in school yesterday.',
+              '',
+            ],
           ],
-        }
-      }
+        },
+      },
+    ],
+  },
+  {
+    id: 'simple-past-regular-verbs',
+    icon: '⏮️',
+    title: 'Past simple with regular Verbs',
+    subtitle: 'Complete actions at specific points in time',
+    color: '#E2E8F0',
+    route: '/simple-past-regular-verbs',
+    sections: [
+      {
+        heading: 'Past Simple',
+        content: 'Pronoun + verd + ed + complement',
+        table: {
+          headers: ['Affirmative', 'Negative',],
+          rows: [
+            ['I worked last night.', "I didn't work last night."],
+            ['She talked to her teacher about her grade.', "She didn't talk to her teacher about her grade."],
+            ['We wanted to buy a new car.', "We didn't want to buy a new car."],
+          ],
+        },
+      },
+      {
+        heading: '🔹 Spelling rules',
+        content: 'add "d" or "ed" to most verbs',
+        examples: [
+          {q: 'Talk', a: 'talked'},
+          {q: 'Want', a: 'wanted'},
+          {q: 'Remember', a: 'remembered'},
+          {q: 'Move', a: 'moved'},
+          {q: 'Play', a: 'played'},
+        ]
+      },
+      {
+        heading: '🔹 Spelling rules',
+        content: 'Verbs ending in consonant + y',
+        examples: [
+          {q: 'Try', a: 'Tried'},
+        ]
+      },
+      {
+        heading: '🔹 Spelling rules',
+        content: 'Syllable verbs ending in C-V-C',
+        examples: [
+          {q: 'Chat', a: 'Chatted'},
+        ]
+      },
+    ]
+  },
+  {
+    id: 'past-tenses',
+    icon: '⏮️',
+    title: 'Tiempos Pasados',
+    subtitle: 'Pasado Simple y Continuo',
+    color: '#10B981',
+    route: '/past-tenses',
+    sections: [
+      {
+        heading: '1 Pasado Simple — Verbos Regulares',
+        content: 'Pronoun + verbo-ed',
+        table: {
+          headers: ['Infinitivo', 'Pasado', 'Ejemplo'],
+          rows: [
+            ['work', 'worked', 'I worked last night.'],
+            ['play', 'played', 'They played soccer.'],
+            ['study', 'studied', 'She studied hard.'],
+          ],
+        },
+      },
+      {
+        heading: '1 Pasado Simple — Verbos Irregulares',
+        table: {
+          headers: ['Infinitivo', 'Pasado', 'Ejemplo'],
+          rows: [
+            ['go', 'went', 'I went to school.'],
+            ['eat', 'ate', 'She ate breakfast.'],
+            ['see', 'saw', 'We saw a movie.'],
+            ['have', 'had', 'He had a problem.'],
+            ['come', 'came', 'She came late.'],
+          ],
+        },
+      },
+      {
+        heading: '2 Pasado Continuo',
+        content: 'Pronoun + was/were + verbo-ing',
+        table: {
+          headers: ['Tipo', 'Estructura', 'Ejemplo'],
+          rows: [
+            ['Afirmativo', 'was/were + -ing', 'I was studying.'],
+            ['Negativo', "wasn't/weren't + -ing", "I wasn't sleeping."],
+            [
+              'Interrogativo',
+              'Was/Were + Pronoun + -ing?',
+              'Were you working?',
+            ],
+          ],
+        },
+      },
     ],
   },
   {
@@ -163,53 +289,6 @@ export const TOPICS: Topic[] = [
           'yesterday morning / yesterday afternoon',
           'I worked yesterday.',
         ],
-      },
-    ],
-  },
-  {
-    id: 'past-tenses',
-    icon: '⏮️',
-    title: 'Tiempos Pasados',
-    subtitle: 'Pasado Simple y Continuo',
-    color: '#10B981',
-    route: '/past-tenses',
-    sections: [
-      {
-        heading: '1 Pasado Simple — Verbos Regulares',
-        content: 'Sujeto + verbo-ed',
-        table: {
-          headers: ['Infinitivo', 'Pasado', 'Ejemplo'],
-          rows: [
-            ['work', 'worked', 'I worked last night.'],
-            ['play', 'played', 'They played soccer.'],
-            ['study', 'studied', 'She studied hard.'],
-          ],
-        },
-      },
-      {
-        heading: '1 Pasado Simple — Verbos Irregulares',
-        table: {
-          headers: ['Infinitivo', 'Pasado', 'Ejemplo'],
-          rows: [
-            ['go', 'went', 'I went to school.'],
-            ['eat', 'ate', 'She ate breakfast.'],
-            ['see', 'saw', 'We saw a movie.'],
-            ['have', 'had', 'He had a problem.'],
-            ['come', 'came', 'She came late.'],
-          ],
-        },
-      },
-      {
-        heading: '2 Pasado Continuo',
-        content: 'Sujeto + was/were + verbo-ing',
-        table: {
-          headers: ['Tipo', 'Estructura', 'Ejemplo'],
-          rows: [
-            ['Afirmativo', 'was/were + -ing', 'I was studying.'],
-            ['Negativo', "wasn't/weren't + -ing", "I wasn't sleeping."],
-            ['Interrogativo', 'Was/Were + sujeto + -ing?', 'Were you working?'],
-          ],
-        },
       },
     ],
   },

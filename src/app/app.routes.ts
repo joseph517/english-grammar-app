@@ -12,14 +12,19 @@ export const routes: Routes = [
             import('./features/ver-to-be/ver-to-be.component').then(m => m.VerToBeComponent)
     },
     {
-        path: 'prepositions',
+        path: 'simple-past-regular-verbs',
         loadComponent: () =>
-            import('./features/prepositions/prepositions.component').then(m => m.PrepotitionsComponent)
+            import('./features/past-regular-verbs/past-regular-verbs.component').then(m => m.PastRegularVerbsComponent)
     },
     {
         path: 'past-tenses',
         loadComponent: () =>
             import('./features/past-tenses/past-tenses.component').then(m => m.PastTensesComponent)
+    },
+    {
+        path: 'prepositions',
+        loadComponent: () =>
+            import('./features/prepositions/prepositions.component').then(m => m.PrepotitionsComponent)
     },
     {
         path: 'nouns',
