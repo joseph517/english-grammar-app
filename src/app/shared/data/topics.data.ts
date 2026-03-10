@@ -105,7 +105,7 @@ export const TOPICS: Topic[] = [
         ],
       },
       {
-        heading: '🔹 Expresiones de tiempo',
+        heading: 'Time Expressions',
         content: 'Pronoun + was/were +  place + time expression',
         table: {
           headers: ['Ago', 'Last', 'Yester'],
@@ -136,96 +136,129 @@ export const TOPICS: Topic[] = [
   {
     id: 'simple-past-regular-verbs',
     icon: '⏮️',
-    title: 'Past simple with regular Verbs',
+    title: 'Past Simple with Regular Verbs',
     subtitle: 'Complete actions at specific points in time',
     color: '#E2E8F0',
     route: '/simple-past-regular-verbs',
     sections: [
       {
-        heading: 'Past Simple',
-        content: 'Pronoun + verd + ed + complement',
+        heading: '🔹 Spelling Rules — add "d" or "ed"',
+        content: 'add "d" or "ed" to most verbs',
+        examples: [
+          { q: 'Talk', a: 'Talked' },
+          { q: 'Want', a: 'Wanted' },
+          { q: 'Remember', a: 'Remembered' },
+          { q: 'Move', a: 'Moved' },
+          { q: 'Play', a: 'Played' },
+        ],
+      },
+      {
+        heading: '🔹 Spelling Rules — consonant + y',
+        content: 'Verbs ending in consonant + y → remove y, add "ied"',
+        examples: [
+          { q: 'Try', a: 'Tried' },
+          { q: 'Study', a: 'Studied' },
+          { q: 'Carry', a: 'Carried' },
+        ],
+      },
+      {
+        heading: '🔹 Spelling Rules — CVC',
+        content:
+          'One-syllable verbs ending in consonant-vowel-consonant → double last consonant + "ed"',
+        examples: [
+          { q: 'Chat', a: 'Chatted' },
+          { q: 'Stop', a: 'Stopped' },
+          { q: 'Plan', a: 'Planned' },
+        ],
+      },
+      {
+        heading: 'Affirmative & Negative Statements',
+        content: 'Pronoun + verb + ed + complement',
         table: {
-          headers: ['Affirmative', 'Negative',],
+          headers: ['Affirmative', 'Negative'],
           rows: [
             ['I worked last night.', "I didn't work last night."],
-            ['She talked to her teacher about her grade.', "She didn't talk to her teacher about her grade."],
+            ['She talked to her teacher.', "She didn't talk to her teacher."],
             ['We wanted to buy a new car.', "We didn't want to buy a new car."],
           ],
         },
       },
       {
-        heading: '🔹 Spelling rules',
-        content: 'add "d" or "ed" to most verbs',
-        examples: [
-          {q: 'Talk', a: 'talked'},
-          {q: 'Want', a: 'wanted'},
-          {q: 'Remember', a: 'remembered'},
-          {q: 'Move', a: 'moved'},
-          {q: 'Play', a: 'played'},
-        ]
+        heading: 'Yes/No Questions',
+        content: 'Did + pronoun + base verb + complement?',
+        table: {
+          headers: ['Question', 'Short Answer (+)', 'Short Answer (-)'],
+          rows: [
+            ['Did you work last night?', 'Yes, I did.', "No, I didn't."],
+            [
+              'Did she talk to her teacher?',
+              'Yes, she did.',
+              "No, she didn't.",
+            ],
+            ['Did they play soccer?', 'Yes, they did.', "No, they didn't."],
+          ],
+        },
       },
       {
-        heading: '🔹 Spelling rules',
-        content: 'Verbs ending in consonant + y',
-        examples: [
-          {q: 'Try', a: 'Tried'},
-        ]
+        heading: 'Wh- Questions',
+        content: 'Wh-word + did + pronoun + base verb + complement?',
+        table: {
+          headers: ['Question', 'Answer'],
+          rows: [
+            ['What did you do last night?', 'I worked at home.'],
+            ['Where did she study?', 'She studied at the library.'],
+            ['When did they play soccer?', 'They played on Saturday.'],
+          ],
+        },
       },
-      {
-        heading: '🔹 Spelling rules',
-        content: 'Syllable verbs ending in C-V-C',
-        examples: [
-          {q: 'Chat', a: 'Chatted'},
-        ]
-      },
-    ]
+      
+    ],
   },
   {
+    // id: 'simple-past-irregular-verbs',
     id: 'past-tenses',
     icon: '⏮️',
-    title: 'Tiempos Pasados',
-    subtitle: 'Pasado Simple y Continuo',
+    title: 'Past Simple with Irregular Verbs',
+    subtitle: 'Verbs that change form in the past',
     color: '#10B981',
-    route: '/past-tenses',
+    // route: '/simple-past-irregular-verbs',
+    route: 'past-tenses',
     sections: [
       {
-        heading: '1 Pasado Simple — Verbos Regulares',
-        content: 'Pronoun + verbo-ed',
+        heading: 'Affirmative & Negative Statements',
+        content: 'Pronoun + irregular past form + complement',
         table: {
-          headers: ['Infinitivo', 'Pasado', 'Ejemplo'],
+          headers: ['Affirmative', 'Negative'],
           rows: [
-            ['work', 'worked', 'I worked last night.'],
-            ['play', 'played', 'They played soccer.'],
-            ['study', 'studied', 'She studied hard.'],
+            ['I went to school yesterday.', "I didn't go to school yesterday."],
+            ['She ate breakfast early.', "She didn't eat breakfast early."],
+            ['We saw a great movie.', "We didn't see that movie."],
+            ['He had a problem.', "He didn't have a problem."],
           ],
         },
       },
       {
-        heading: '1 Pasado Simple — Verbos Irregulares',
+        heading: 'Yes/No Questions',
+        content: 'Did + pronoun + base verb + complement?',
         table: {
-          headers: ['Infinitivo', 'Pasado', 'Ejemplo'],
+          headers: ['Question', 'Short Answer (+)', 'Short Answer (-)'],
           rows: [
-            ['go', 'went', 'I went to school.'],
-            ['eat', 'ate', 'She ate breakfast.'],
-            ['see', 'saw', 'We saw a movie.'],
-            ['have', 'had', 'He had a problem.'],
-            ['come', 'came', 'She came late.'],
+            ['Did you go to school?', 'Yes, I did.', "No, I didn't."],
+            ['Did she eat breakfast?', 'Yes, she did.', "No, she didn't."],
+            ['Did they see the movie?', 'Yes, they did.', "No, they didn't."],
           ],
         },
       },
       {
-        heading: '2 Pasado Continuo',
-        content: 'Pronoun + was/were + verbo-ing',
+        heading: 'Wh- Questions',
+        content: 'Wh-word + did + pronoun + base verb + complement?',
         table: {
-          headers: ['Tipo', 'Estructura', 'Ejemplo'],
+          headers: ['Question', 'Answer'],
           rows: [
-            ['Afirmativo', 'was/were + -ing', 'I was studying.'],
-            ['Negativo', "wasn't/weren't + -ing", "I wasn't sleeping."],
-            [
-              'Interrogativo',
-              'Was/Were + Pronoun + -ing?',
-              'Were you working?',
-            ],
+            ['Where did you go yesterday?', 'I went to the park.'],
+            ['What did she eat?', 'She ate a sandwich.'],
+            ['Who did they see?', 'They saw their friends.'],
+            ['When did he have the problem?', 'He had it last week.'],
           ],
         },
       },

@@ -6,8 +6,8 @@ export interface TableData {
 export interface IrregularVerb {
   base: string;
   pastSimple: string;
-  presentContinuous: string;
-  pastContinuous: string;
+  presentContinuous?: string;
+  pastContinuous?: string;
   example: string;
 }
 
