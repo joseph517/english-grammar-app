@@ -13,6 +13,6 @@ import { GrammarTableComponent } from '../../shared/components/grammar-table/gra
 })
 export class PastTensesComponent {
 
-  topic = TOPICS.find(topic => topic.id === 'past-tenses')
+  topic = TOPICS.find(topic => topic.id === 'simple-past-irregular-verbs')
 
 }

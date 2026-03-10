@@ -17,7 +17,7 @@ export const routes: Routes = [
             import('./features/past-regular-verbs/past-regular-verbs.component').then(m => m.PastRegularVerbsComponent)
     },
     {
-        path: 'past-tenses',
+        path: 'simple-past-irregular-verbs',
         loadComponent: () =>
             import('./features/past-tenses/past-tenses.component').then(m => m.PastTensesComponent)
     },

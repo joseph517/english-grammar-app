@@ -215,14 +215,14 @@ export const TOPICS: Topic[] = [
     ],
   },
   {
-    // id: 'simple-past-irregular-verbs',
-    id: 'past-tenses',
+    id: 'simple-past-irregular-verbs',
+    // id: 'past-tenses',
     icon: '⏮️',
     title: 'Past Simple with Irregular Verbs',
     subtitle: 'Verbs that change form in the past',
     color: '#10B981',
-    // route: '/simple-past-irregular-verbs',
-    route: 'past-tenses',
+    route: '/simple-past-irregular-verbs',
+    // route: 'past-tenses',
     sections: [
       {
         heading: 'Affirmative & Negative Statements',
