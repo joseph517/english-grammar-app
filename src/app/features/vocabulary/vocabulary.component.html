@@ -7,11 +7,10 @@
   </header>
 
   <div class="sections">
-
     <section class="section-card">
       <h3>{{ topic.sections[0].heading }}</h3>
       <p class="section-content">{{ topic.sections[0].content }}</p>
-
+      
       @if (topic.sections[0].table) {
         <app-grammar-table [data]="topic.sections[0].table" />
       }
@@ -52,8 +51,8 @@
             </tr>
           </thead>
           <tbody>
-            @if (filteredVerbs().length > 0) {
-              @for (verb of filteredVerbs(); track verb.base) {
+            @if (paginatedVerbs().length > 0) {
+              @for (verb of paginatedVerbs(); track verb.base) {
                 <tr>
                   <td class="verb-base">{{ verb.base }}</td>
                   <td class="verb-form">{{ verb.pastSimple }}</td>
@@ -62,6 +61,7 @@
                   <td class="verb-example">{{ verb.example }}</td>
                 </tr>
               }
+
             } @else {
               <tr>
                 <td colspan="5" class="no-results">
@@ -71,8 +71,15 @@
             }
           </tbody>
         </table>
+        @if (paginatedVerbs().length > 0) {
+          <app-pagination
+            [currentPage]="currentPage()"
+            [pageSize]="pageSize()"
+            [totalItems]="filteredVerbs().length"
+            (pageChange)="handlePageChange($event)"
+          />
+        }
       </div>
-
     </section>
   </div>
 </div>

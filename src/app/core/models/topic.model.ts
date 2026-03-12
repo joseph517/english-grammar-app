@@ -18,6 +18,7 @@ export interface ListItem {
 
 export interface Section {
   heading: string;
+  noItalic?: boolean;
   content?: string;
   table?: TableData;
   irregularVerbs?: IrregularVerb[];

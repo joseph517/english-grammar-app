@@ -15,7 +15,7 @@
         }
 
         @if (section.table) {
-          <app-grammar-table [data]="section.table" />
+          <app-grammar-table [isItalic]="!section.noItalic"  [data]="section.table" />
         }
 
         @if (section.examples) {

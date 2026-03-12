@@ -106,27 +106,25 @@ export const TOPICS: Topic[] = [
       },
       {
         heading: 'Time Expressions',
+        noItalic: true,
         content: 'Pronoun + was/were +  place + time expression',
         table: {
-          headers: ['Ago', 'Last', 'Yester'],
+          headers: ['Ago', 'Last', 'Yesterday'],
           rows: [
             [
               'I was in school last year.',
               'I was in school ago.',
               'I was in school yesterday.',
-              '',
             ],
             [
               'She was in school last year.',
               'She was in school ago.',
               'She was in school yesterday.',
-              '',
             ],
             [
               'They were in school last year.',
               'They were in school ago.',
               'They were in school yesterday.',
-              '',
             ],
           ],
         },
@@ -382,7 +380,7 @@ export const TOPICS: Topic[] = [
         heading: '📘 Palabras importantes',
         content: 'Conectores y adverbios esenciales para nivel',
         table: {
-          headers: ['Inglés', 'Español', 'Ejemplo'],
+          headers: ['English', 'Spanish', 'Example'],
           rows: [
             ['although', 'aunque', 'Although it was late, she stayed.'],
             ['however', 'sin embargo', 'I was tired. However, I finished.'],
