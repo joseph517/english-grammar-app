@@ -45,5 +45,10 @@ export const routes: Routes = [
         path: 'how-often',
         loadComponent: () =>
             import('./features/how-often/how-often.component').then(m => m.HowOftenComponent)
+    },
+    {
+        path: 'like-would-like',
+        loadComponent: () =>
+            import('./features/like-would-like/like-would-like.component').then(m => m.LikeWouldLikeComponent)
     }
 ];
