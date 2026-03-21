@@ -60,5 +60,10 @@ export const routes: Routes = [
         path: 'when-clauses',
         loadComponent: () =>
             import('./features/when-clauses/when-clauses.component').then(m => m.WhenClausesComponent)
+    },
+    {
+        path: 'can-could',
+        loadComponent: () =>
+            import('./features/can-could/can-could.component').then(m => m.CanCouldComponent)
     }
 ];

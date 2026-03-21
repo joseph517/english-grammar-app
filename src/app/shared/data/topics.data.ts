@@ -1164,7 +1164,7 @@ export const TOPICS: Topic[] = [
         },
       },
       {
-        heading: '🔹 Questions and Short Answers',
+        heading: 'Questions and Short Answers',
         table: {
           headers: [
             'Modal',
