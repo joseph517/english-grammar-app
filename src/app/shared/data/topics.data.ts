@@ -105,29 +105,129 @@ export const TOPICS: Topic[] = [
         ],
       },
       {
-        heading: 'Time Expressions',
-        noItalic: true,
-        content: 'Pronoun + was/were +  place + time expression',
+        heading: 'Present Continuous',
+        content: 'Subject + Be + Verb(-ing) + complement',
         table: {
-          headers: ['Ago', 'Last', 'Yesterday'],
+          headers: [
+            'Subject + Be',
+            'Verb + -ing',
+            '',
+            'Future Time Expression',
+          ],
           rows: [
             [
-              'I was in school last year.',
-              'I was in school ago.',
-              'I was in school yesterday.',
+              "We're",
+              'meeting',
+              'at the theater',
+              'at 8:00 / in an hour / today / tonight / tomorrow.',
+            ],
+            ["I'm", 'going', 'to a movie', 'this weekend.'],
+            ["They're", 'releasing', 'the sequel', 'next year.'],
+          ],
+        },
+        examples_simple: [
+          'Use present continuous to talk about things you can plan (an appointment, a trip).',
+          "Do NOT use it for things you cannot plan (weather, illness). ❌ It's raining tomorrow.",
+          "A: What are you doing this weekend?  B: I'm going to a movie on Saturday with friends.",
+        ],
+      },
+      {
+        heading: 'Be Going To',
+        content: 'Subject + Be + (Not) + going to + Base Form',
+        table: {
+          headers: ['Subject', 'Be', '(Not)', 'Going To', 'Base Form', ''],
+          rows: [
+            ['I', 'am', '', 'going to', 'buy', 'a reusable water bottle.'],
+            [
+              'You',
+              'are',
+              'not',
+              'going to',
+              'buy',
+              'a reusable water bottle.',
             ],
             [
-              'She was in school last year.',
-              'She was in school ago.',
-              'She was in school yesterday.',
+              'He / She',
+              'is',
+              '',
+              'going to',
+              'buy',
+              'a reusable water bottle.',
             ],
             [
-              'They were in school last year.',
-              'They were in school ago.',
-              'They were in school yesterday.',
+              'We / They',
+              'are',
+              '',
+              'going to',
+              'buy',
+              'a reusable water bottle.',
             ],
           ],
         },
+        examples_simple: [
+          "Use be going to + base form for definite future plans. → I'm going to buy a reusable water bottle.",
+          "Negative: I'm not going to use plastic bags.",
+          'Often used with a future time expression. → tomorrow / this weekend / next week / after class.',
+          'Also used for predictions. → The plastic ban is going to help Kenya.',
+        ],
+      },
+      {
+        heading: '🔹 Yes/No Questions (Be Going To)',
+        content: 'Be + Subject + going to + Base Form + ?',
+        table: {
+          headers: [
+            'Be',
+            'Subject',
+            'Going To',
+            '',
+            'Short Answer (+)',
+            'Short Answer (-)',
+          ],
+          rows: [
+            [
+              'Is',
+              'she',
+              'going to',
+              'buy a new bottle?',
+              'Yes, she is.',
+              "No, she's not. / No, she isn't.",
+            ],
+            [
+              'Are',
+              'you',
+              'going to',
+              'buy a new bottle?',
+              'Yes, I am.',
+              "No, I'm not.",
+            ],
+            [
+              'Are',
+              'they',
+              'going to',
+              'buy a new bottle?',
+              'Yes, they are.',
+              "No, they're not. / No, they aren't.",
+            ],
+          ],
+        },
+      },
+      {
+        heading: '🔹 Wh- Questions (Be Going To)',
+        content: 'Wh- + Be + Subject + going to + Base Form + ?',
+        examples: [
+          {
+            q: 'What are you going to buy?',
+            a: "(I'm going to buy) a new water bottle.",
+          },
+          {
+            q: 'When are you going to buy it?',
+            a: "(I'm going to buy it) tomorrow.",
+          },
+          {
+            q: 'Why are you going to buy it?',
+            a: "(I'm going to buy it) because I need one.",
+          },
+        ],
       },
     ],
   },
@@ -209,7 +309,6 @@ export const TOPICS: Topic[] = [
           ],
         },
       },
-      
     ],
   },
   {
@@ -326,85 +425,81 @@ export const TOPICS: Topic[] = [
     ],
   },
   {
-  id: 'nouns',
-  icon: '📦',
-  title: 'Nouns',
-  subtitle: 'Count and Noncount Nouns',
-  color: '#F59E0B',
-  route: '/nouns',
-  sections: [
-    {
-      heading: 'Count Nouns',
-      content: 'Can be counted - Have plural',
-      table: {
-        headers: ['Singular', 'Plural', 'Example'],
-        rows: [
-          ['a book', 'books', 'I have two books.'],
-          ['a cat', 'cats', 'Three cats are here.'],
-          ['an apple', 'apples', 'She ate five apples.'],
-        ],
-      },
-    },
-    {
-      heading: 'Noncount Nouns',
-      content: 'Cannot be counted - No plural',
-      table: {
-        headers: ['Noun', 'Category', 'Example'],
-        rows: [
-          ['water', 'liquid', 'I drink water daily.'],
-          ['money', 'abstract', "He doesn't have money."],
-          ['rice', 'food', 'We cooked rice.'],
-        ],
-      },
-    },
-    {
-      heading: 'Quantifiers',
-      content: 'How Many vs How Much',
-      subsections: [
-        {
-          heading: 'How Many — Plural Count Nouns',
-          examples: [
-            { q: 'How many cars are there?', a: '' },
+    id: 'nouns',
+    icon: '📦',
+    title: 'Nouns',
+    subtitle: 'Count and Noncount Nouns',
+    color: '#F59E0B',
+    route: '/nouns',
+    sections: [
+      {
+        heading: 'Count Nouns',
+        content: 'Can be counted - Have plural',
+        table: {
+          headers: ['Singular', 'Plural', 'Example'],
+          rows: [
+            ['a book', 'books', 'I have two books.'],
+            ['a cat', 'cats', 'Three cats are here.'],
+            ['an apple', 'apples', 'She ate five apples.'],
           ],
-          table: {
-            headers: ['Form', 'Long Answer', 'Short Answer'],
-            rows: [
-              ['Positive', 'There are a lot / many.', 'A lot. / Many.'],
-              ['Positive', 'There are some / a few.', 'Some. / A few.'],
-              ['Negative', "There aren't many.", 'Not many.'],
-              ['Negative', "There aren't any.", 'None.'],
+        },
+      },
+      {
+        heading: 'Noncount Nouns',
+        content: 'Cannot be counted - No plural',
+        table: {
+          headers: ['Noun', 'Category', 'Example'],
+          rows: [
+            ['water', 'liquid', 'I drink water daily.'],
+            ['money', 'abstract', "He doesn't have money."],
+            ['rice', 'food', 'We cooked rice.'],
+          ],
+        },
+      },
+      {
+        heading: 'Quantifiers',
+        content: 'How Many vs How Much',
+        subsections: [
+          {
+            heading: 'How Many — Plural Count Nouns',
+            examples: [{ q: 'How many cars are there?', a: '' }],
+            table: {
+              headers: ['Form', 'Long Answer', 'Short Answer'],
+              rows: [
+                ['Positive', 'There are a lot / many.', 'A lot. / Many.'],
+                ['Positive', 'There are some / a few.', 'Some. / A few.'],
+                ['Negative', "There aren't many.", 'Not many.'],
+                ['Negative', "There aren't any.", 'None.'],
+              ],
+            },
+          },
+          {
+            heading: 'How Much — Noncount Nouns',
+            examples: [{ q: 'How much pollution is there?', a: '' }],
+            table: {
+              headers: ['Form', 'Long Answer', 'Short Answer'],
+              rows: [
+                ['Positive', 'There is a lot.', 'A lot.'],
+                ['Positive', 'There is some / a little.', 'Some. / A little.'],
+                ['Negative', "There isn't much.", 'Not much.'],
+                ['Negative', "There isn't any.", 'None.'],
+              ],
+            },
+          },
+          {
+            heading: 'Quick Rules',
+            noItalic: true,
+            examples_simple: [
+              'Use How many → with plural count nouns.',
+              'Use How much → with noncount nouns.',
+              'Short answers are very common in conversation.',
+              'A: How many parks are there in your city?  B: A few. (= a very small number)',
             ],
           },
-        },
-        {
-          heading: 'How Much — Noncount Nouns',
-          examples: [
-            { q: 'How much pollution is there?', a: '' },
-          ],
-          table: {
-            headers: ['Form', 'Long Answer', 'Short Answer'],
-            rows: [
-              ['Positive', 'There is a lot.', 'A lot.'],
-              ['Positive', 'There is some / a little.', 'Some. / A little.'],
-              ['Negative', "There isn't much.", 'Not much.'],
-              ['Negative', "There isn't any.", 'None.'],
-            ],
-          },
-        },
-        {
-          heading: 'Quick Rules',
-          noItalic: true,
-          examples_simple: [
-            'Use How many → with plural count nouns.',
-            'Use How much → with noncount nouns.',
-            'Short answers are very common in conversation.',
-            'A: How many parks are there in your city?  B: A few. (= a very small number)',
-          ],
-        },
-      ],
-    },
-  ],
-},
+        ],
+      },
+    ],
+  },
   {
     id: 'vocabulary',
     icon: '📘',
@@ -857,6 +952,343 @@ export const TOPICS: Topic[] = [
               'Our team is winning. Our team was winning when the referee stopped it.',
           },
         ],
+      },
+    ],
+  },
+  {
+    id: 'verb-infinitive',
+    icon: '🔤',
+    title: 'Verb + Infinitive / Verb + Noun',
+    subtitle: 'Verbs followed by infinitive or noun',
+    color: '#6366F1',
+    route: '/verb-infinitive',
+    sections: [
+      {
+        heading: 'Verb + Infinitive',
+        content: 'Subject + Verb + to + base verb',
+        table: {
+          headers: ['Subject', 'Verb', 'Infinitive', ''],
+          rows: [
+            ['I', 'need', 'to study', 'for a test.'],
+            ['She', 'wants', 'to meet', 'her friends later.'],
+            ['They', 'like', 'to go', 'biking together.'],
+          ],
+        },
+      },
+      {
+        heading: 'Verb + Noun',
+        content: 'Subject + Verb + Noun',
+        table: {
+          headers: ['Subject', 'Verb', 'Noun', ''],
+          rows: [
+            ['I', 'need', 'help', 'with my homework.'],
+            ['She', 'wants', 'a new bike.', ''],
+            ['They', 'like', 'biking*', 'together.'],
+          ],
+        },
+      },
+      {
+        heading: 'Verbs that work both ways',
+        content:
+          'forget, hate, learn, like, love, need, decide, plan, prepare, want',
+        examples_simple: [
+          'These verbs can be followed by a noun or an infinitive (to + verb).',
+          '*An -ing word can be a noun.',
+          'She likes to swimming in the morning.',
+          'She likes swimming in the morning.',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'how-often',
+    icon: '🔁',
+    title: 'How Often',
+    subtitle: 'Frequency questions and expressions',
+    color: '#0EA5E9',
+    route: '/how-often',
+    sections: [
+      {
+        heading: 'Questions and Answers with How Often',
+        examples: [{ q: 'How often do you clean your room?', a: '' }],
+        table: {
+          headers: ['Subject', 'Frequency Expression'],
+          rows: [
+            ['', 'every day / week / month.'],
+            [
+              '(I clean it)',
+              'once / twice / three times / several times a week / month.',
+            ],
+            ['', 'all the time / once in a while.'],
+          ],
+        },
+      },
+      {
+        heading: 'Rules',
+        examples_simple: [
+          'How often asks about the frequency of an event.',
+          'Frequency expressions usually come at the end of a sentence. → I clean my room once a week.',
+          'Hardly ever and never come before a verb. → I hardly ever / never clean my room.',
+          'You can answer a How often question with the frequency expression only. → Once a week.',
+          'Some expressions give a specific answer. → every day / once a week.',
+          'All the time and once in a while are less specific. → I clean my room once in a while.',
+          '*all the time = always   *once in a while = sometimes',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'like-would-like',
+    icon: '❤️',
+    title: 'Like vs Would Like',
+    subtitle: 'Infinitive and gerund after like',
+    color: '#EC4899',
+    route: '/like-would-like',
+    sections: [
+      {
+        heading: 'Like + Infinitive or Gerund',
+        table: {
+          headers: ['', 'Subject', 'Like', 'Infinitive or Gerund', ''],
+          rows: [
+            ['', 'I', 'like', 'to organize / organizing', 'things.'],
+            ['Do', 'you', 'like', 'to organize / organizing', 'things?'],
+          ],
+        },
+        examples_simple: [
+          'The infinitive (to + verb) or the gerund (-ing form) is used after like.',
+          "Use like to talk about things you enjoy in general. → Most people don't like cleaning, but I like to organize things.",
+          "Short answers: Do you like...?  Yes, I do. / No, I don't.",
+        ],
+      },
+      {
+        heading: 'Would Like + Infinitive',
+        table: {
+          headers: ['Subject', 'Would', 'Like', 'Infinitive', ''],
+          rows: [
+            ['I', 'would', 'like', 'to organize', 'my room.'],
+            ['Would you', '', 'like', 'to organize', 'your room?'],
+          ],
+        },
+        examples_simple: [
+          'The infinitive (to + verb) is used after would like.',
+          "In spoken English use the contraction. → I'd like to organize my room.",
+          "Use would like for specific things you want to do in the future. → My room is a mess. I'd like to organize it.",
+          "Short answers: Would you like...?  Yes, I would. / No, I wouldn't.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 'imperatives',
+    icon: '📢',
+    title: 'Imperatives',
+    subtitle: 'Commands, advice and directions',
+    color: '#F97316',
+    route: '/imperatives',
+    sections: [
+      {
+        heading: 'Affirmative and Negative Imperatives',
+        table: {
+          headers: [
+            'Tell Someone to Do Something',
+            '',
+            'Tell Someone Not to Do Something',
+            '',
+          ],
+          rows: [
+            ['Stay', 'calm.', "Don't panic.", ''],
+            ['Go', 'straight.', "Don't turn", 'right.'],
+            ['Close', 'your eyes.', "Don't move", 'your arms or legs.'],
+            ['Take', 'an aspirin every day.', "Don't forget", 'to do it.'],
+          ],
+        },
+        examples_simple: [
+          'Use the imperative to give advice, directions, and orders.',
+          'Add please to make your request more polite. → Move outside, please.',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'when-clauses',
+    icon: '⏱️',
+    title: 'When Clauses',
+    subtitle: 'Connecting actions and results',
+    color: '#84CC16',
+    route: '/when-clauses',
+    sections: [
+      {
+        heading: 'When Clause + Result Clause',
+        table: {
+          headers: ['When Clause', 'Result Clause'],
+          rows: [['When I drink coffee,', "I can't sleep."]],
+        },
+      },
+      {
+        heading: 'Result Clause + When Clause',
+        table: {
+          headers: ['Result Clause', 'When Clause'],
+          rows: [["I can't sleep", 'when I drink coffee.']],
+        },
+      },
+      {
+        heading: 'Rules',
+        examples_simple: [
+          'The simple present is used in both the when clause and the result clause.',
+          'The result clause can come first or second. When it comes first, there is no comma between the two clauses.',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'can-could',
+    icon: '💪',
+    title: 'Can and Could',
+    subtitle: 'Ability in the present and past',
+    color: '#A855F7',
+    route: '/can-could',
+    sections: [
+      {
+        heading: 'Structure',
+        table: {
+          headers: ['Subject', 'Modal Verb', 'Base Form', ''],
+          rows: [
+            ['I / You / He / She / We / They', "can / can't", 'cook', 'well.'],
+            [
+              'I / You / He / She / We / They',
+              "could / couldn't",
+              'cook',
+              'well.',
+            ],
+          ],
+        },
+      },
+      {
+        heading: '🔹 Questions and Short Answers',
+        table: {
+          headers: [
+            'Modal',
+            'Subject',
+            'Base Form',
+            'Short Answer (+)',
+            'Short Answer (-)',
+          ],
+          rows: [
+            ['Can', 'you', 'cook well?', 'Yes, I can.', "No, I can't."],
+            ['Can', 'he', 'cook well?', 'Yes, he can.', "No, he can't."],
+            [
+              'Could',
+              'you',
+              'cook well at age 16?',
+              'Yes, I could.',
+              "No, I couldn't.",
+            ],
+            [
+              'Could',
+              'he',
+              'cook well at age 16?',
+              'Yes, he could.',
+              "No, he couldn't.",
+            ],
+          ],
+        },
+      },
+      {
+        heading: 'Rules',
+        examples_simple: [
+          "Use can and can't to talk about things you are able or unable to do now. → I can / can't cook well.",
+          "Use could and couldn't to talk about things you were able or unable to do in the past. → I could / couldn't cook well at age 16.",
+          "Can, can't, could, and couldn't are the same for all subjects. → I / Victor / They can cook well.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 'because-so',
+    icon: '🔗',
+    title: 'Because and So',
+    subtitle: 'Connecting ideas with reason and result',
+    color: '#F43F5E',
+    route: '/because-so',
+    sections: [
+      {
+        heading: 'Because — Reason',
+        table: {
+          headers: ['Main Clause', 'Reason Clause'],
+          rows: [['My family moved', 'because my dad got a new job.']],
+        },
+        examples_simple: [
+          'Because can join two clauses together. A clause has a subject and a verb.',
+          'Because answers the question why. → Why did your family move? (My family moved) because my dad got a new job.',
+          "In conversation, people often give the reason only (Because my dad got a new job). Don't do this in formal writing.",
+          'In writing, when the reason comes first, put a comma before the main clause. → Because my dad got a new job, my family moved.',
+        ],
+      },
+      {
+        heading: 'So — Result',
+        table: {
+          headers: ['Main Clause', 'Result Clause'],
+          rows: [['My dad got a new job,', 'so my family moved.']],
+        },
+        examples_simple: [
+          'So can join two clauses together.',
+          'So describes a result.',
+          'In writing, use a comma before so unless the two clauses are very short.',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'adjectives-ed-ing',
+    icon: '😮',
+    title: '-ed and -ing Adjectives',
+    subtitle: 'Feelings vs causes of feelings',
+    color: '#F59E0B',
+    route: '/adjectives-ed-ing',
+    sections: [
+      {
+        heading: '-ed vs -ing Adjectives',
+        table: {
+          headers: ['-ed Adjectives', '-ing Adjectives'],
+          rows: [
+            [
+              "1a. I'm bored. I don't like this movie.",
+              "1b. This movie is boring. Let's watch something else.",
+            ],
+            [
+              '2a. I was surprised by the ending.',
+              '2b. The end of the movie was surprising.',
+            ],
+          ],
+        },
+        examples_simple: [
+          'An -ed adjective describes a temporary feeling. Use it for people. → "I\'m bored" means "I feel bored."',
+          'An -ing adjective describes a feature of something or someone. It describes the cause of a feeling. → "This movie is boring" means "This movie is making me feel bored."',
+        ],
+      },
+      {
+        heading: 'Common -ed / -ing Pairs',
+        table: {
+          headers: ['', '', ''],
+          rows: [
+            [
+              'amazed / amazing',
+              'disappointed / disappointing',
+              'frightened / frightening',
+            ],
+            [
+              'bored / boring',
+              'entertained / entertaining',
+              'interested / interesting',
+            ],
+            [
+              'confused / confusing',
+              'excited / exciting',
+              'surprised / surprising',
+            ],
+            ['depressed / depressing', 'exhausted / exhausting', ''],
+          ],
+        },
       },
     ],
   },
