@@ -50,5 +50,10 @@ export const routes: Routes = [
         path: 'like-would-like',
         loadComponent: () =>
             import('./features/like-would-like/like-would-like.component').then(m => m.LikeWouldLikeComponent)
+    },
+    {
+        path: 'imperatives',
+        loadComponent: () =>
+            import('./features/imperative/imperative.component').then(m => m.ImperativeComponent)
     }
 ];
