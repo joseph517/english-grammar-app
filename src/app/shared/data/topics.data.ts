@@ -1241,7 +1241,7 @@ export const TOPICS: Topic[] = [
   {
     id: 'adjectives-ed-ing',
     icon: '😮',
-    title: '-ed and -ing Adjectives',
+    title: 'ed and -ing Adjectives',
     subtitle: 'Feelings vs causes of feelings',
     color: '#F59E0B',
     route: '/adjectives-ed-ing',
@@ -1252,12 +1252,12 @@ export const TOPICS: Topic[] = [
           headers: ['-ed Adjectives', '-ing Adjectives'],
           rows: [
             [
-              "1a. I'm bored. I don't like this movie.",
-              "1b. This movie is boring. Let's watch something else.",
+              "I'm bored. I don't like this movie.",
+              "This movie is boring. Let's watch something else.",
             ],
             [
-              '2a. I was surprised by the ending.',
-              '2b. The end of the movie was surprising.',
+              'I was surprised by the ending.',
+              'The end of the movie was surprising.',
             ],
           ],
         },
