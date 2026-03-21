@@ -70,5 +70,10 @@ export const routes: Routes = [
         path: 'because-so',
         loadComponent: () =>
             import('./features/because-so/because-so.component').then(m => m.BecauseSoComponent)
+    },
+    {
+        path: 'adjectives-ed-ing',
+        loadComponent: () =>
+            import('./features/adjectives-ed-ing/adjectives-ed-ing.component').then(m => m.AdjectivesEdIngComponent)
     }
 ];
