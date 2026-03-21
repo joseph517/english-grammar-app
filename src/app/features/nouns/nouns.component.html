@@ -47,6 +47,35 @@
             }
           </div>
         }
+
+        @if (section.subsections) {
+          <div class="examples-list">
+            @for (sub of section.subsections; track $index) {
+              <div class="example-item">
+                <span class="question">{{ sub.heading }}</span>
+
+                @if (sub.examples) {
+                  @for (ex of sub.examples; track $index) {
+                    <span class="answer">❓ {{ ex.q }}</span>
+                  }
+                }
+
+                @if (sub.table) {
+                  <app-grammar-table [data]="sub.table" />
+                }
+
+                @if (sub.examples_simple) {
+                  <ul class="simple-list">
+                    @for (ex of sub.examples_simple; track $index) {
+                      <li>{{ ex }}</li>
+                    }
+                  </ul>
+                }
+              </div>
+            }
+          </div>
+        }
+
       </section>
     }
   </div>

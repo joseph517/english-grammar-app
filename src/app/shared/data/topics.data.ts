@@ -265,120 +265,157 @@ export const TOPICS: Topic[] = [
   {
     id: 'prepositions',
     icon: '🕐',
-    title: 'Preposiciones de Tiempo',
+    title: 'Time Prepositions',
     subtitle: 'IN, ON, AT, AGO, LAST, YESTERDAY',
     color: '#8B5CF6',
     route: '/prepositions',
     sections: [
       {
-        heading: '1 IN — meses, años, períodos largos',
-        content: 'Úsalo para períodos largos de tiempo.',
+        heading: 'IN — months, years, long periods',
+        content: 'Used for long periods of time',
         examples_simple: [
-          'in January / in 2024 / in summer',
-          'in the morning / in the afternoon',
+          'in January / in 2024 / in summer.',
+          'in the morning / in the afternoon.',
           'She was born in 1990.',
           'I studied in the morning.',
         ],
       },
       {
-        heading: '2 ON — días y fechas específicas',
-        content: 'Úsalo para días específicos.',
+        heading: 'ON — specific days and dates',
+        content: 'Used for specific days',
         examples_simple: [
-          'on Monday / on March 15th',
-          'on my birthday / on Christmas Day',
+          'on Monday / on March 15th.',
+          'on my birthday / on Christmas Day.',
           'I work on Mondays.',
         ],
       },
       {
-        heading: '3 AT — hora exacta',
-        content: 'Úsalo para horas y momentos puntuales.',
+        heading: 'AT — exact time',
+        content: 'Used for hours and exact times',
         examples_simple: [
           'at 3:00 PM / at midnight / at noon',
           'The meeting is at 9 AM.',
         ],
       },
       {
-        heading: '4 AGO — hace…',
+        heading: 'AGO — [Time] ago',
         content: '[Time] + ago',
         examples_simple: [
-          'two days ago → hace dos días',
+          'two days ago.',
+          'one year ago.',
           'I moved here five years ago.',
         ],
       },
       {
-        heading: '5 LAST — el/la pasado/a',
-        content: 'last + [período de tiempo]',
+        heading: 'LAST — the previous one',
+        content: 'last + [period of time]',
         examples_simple: [
           'last night / last week / last year',
-          'I saw him last Friday.',
+          'I saw him last Friday',
         ],
       },
       {
-        heading: '6 YESTERDAY — ayer',
-        content: 'Solo para el día anterior.',
+        heading: 'YESTERDAY — the day before',
+        content: 'Only for the previous day.',
         examples_simple: [
-          'yesterday morning / yesterday afternoon',
+          'yesterday morning.',
+          'yesterday afternoon.',
           'I worked yesterday.',
         ],
       },
     ],
   },
   {
-    id: 'nouns',
-    icon: '📦',
-    title: 'Sustantivos',
-    subtitle: 'Contables e Incontables',
-    color: '#F59E0B',
-    route: '/nouns',
-    sections: [
-      {
-        heading: '1 Sustantivos Contables',
-        content: 'Se pueden contar. Tienen plural.',
-        table: {
-          headers: ['Singular', 'Plural', 'Ejemplo'],
-          rows: [
-            ['a book', 'books', 'I have two books.'],
-            ['a cat', 'cats', 'Three cats are here.'],
-            ['an apple', 'apples', 'She ate five apples.'],
+  id: 'nouns',
+  icon: '📦',
+  title: 'Nouns',
+  subtitle: 'Count and Noncount Nouns',
+  color: '#F59E0B',
+  route: '/nouns',
+  sections: [
+    {
+      heading: 'Count Nouns',
+      content: 'Can be counted - Have plural',
+      table: {
+        headers: ['Singular', 'Plural', 'Example'],
+        rows: [
+          ['a book', 'books', 'I have two books.'],
+          ['a cat', 'cats', 'Three cats are here.'],
+          ['an apple', 'apples', 'She ate five apples.'],
+        ],
+      },
+    },
+    {
+      heading: 'Noncount Nouns',
+      content: 'Cannot be counted - No plural',
+      table: {
+        headers: ['Noun', 'Category', 'Example'],
+        rows: [
+          ['water', 'liquid', 'I drink water daily.'],
+          ['money', 'abstract', "He doesn't have money."],
+          ['rice', 'food', 'We cooked rice.'],
+        ],
+      },
+    },
+    {
+      heading: 'Quantifiers',
+      content: 'How Many vs How Much',
+      subsections: [
+        {
+          heading: 'How Many — Plural Count Nouns',
+          examples: [
+            { q: 'How many cars are there?', a: '' },
+          ],
+          table: {
+            headers: ['Form', 'Long Answer', 'Short Answer'],
+            rows: [
+              ['Positive', 'There are a lot / many.', 'A lot. / Many.'],
+              ['Positive', 'There are some / a few.', 'Some. / A few.'],
+              ['Negative', "There aren't many.", 'Not many.'],
+              ['Negative', "There aren't any.", 'None.'],
+            ],
+          },
+        },
+        {
+          heading: 'How Much — Noncount Nouns',
+          examples: [
+            { q: 'How much pollution is there?', a: '' },
+          ],
+          table: {
+            headers: ['Form', 'Long Answer', 'Short Answer'],
+            rows: [
+              ['Positive', 'There is a lot.', 'A lot.'],
+              ['Positive', 'There is some / a little.', 'Some. / A little.'],
+              ['Negative', "There isn't much.", 'Not much.'],
+              ['Negative', "There isn't any.", 'None.'],
+            ],
+          },
+        },
+        {
+          heading: 'Quick Rules',
+          noItalic: true,
+          examples_simple: [
+            'Use How many → with plural count nouns.',
+            'Use How much → with noncount nouns.',
+            'Short answers are very common in conversation.',
+            'A: How many parks are there in your city?  B: A few. (= a very small number)',
           ],
         },
-      },
-      {
-        heading: '2 Sustantivos Incontables',
-        content: 'No se pueden contar. Sin plural.',
-        table: {
-          headers: ['Sustantivo', 'Categoría', 'Ejemplo'],
-          rows: [
-            ['water', 'líquido', 'I drink water daily.'],
-            ['money', 'abstracto', "He doesn't have money."],
-            ['rice', 'alimento', 'We cooked rice.'],
-          ],
-        },
-      },
-      {
-        heading: '🔹 Cuantificadores',
-        table: {
-          headers: ['', 'Contables', 'Incontables'],
-          rows: [
-            ['Pregunta', 'How many?', 'How much?'],
-            ['Positivo', 'many / a few', 'much / a little'],
-            ['Negativo', 'few', 'little'],
-          ],
-        },
-      },
-    ],
-  },
+      ],
+    },
+  ],
+},
   {
     id: 'vocabulary',
     icon: '📘',
-    title: 'Vocabulario',
-    subtitle: 'Palabras importantes y verbos irregulares',
+    title: 'Vocabulary',
+    subtitle: 'Important words and irregular verbs',
     color: '#EF4444',
     route: '/vocabulary',
     sections: [
       {
-        heading: '📘 Palabras importantes',
-        content: 'Conectores y adverbios esenciales para nivel',
+        heading: 'Important words',
+        content: 'Essential connectors and adverbs for level',
         table: {
           headers: ['English', 'Spanish', 'Example'],
           rows: [
@@ -422,7 +459,7 @@ export const TOPICS: Topic[] = [
         },
       },
       {
-        heading: '📘 Verbos irregulares más comunes',
+        heading: 'Common Irregular Verbs',
         content: '',
         irregularVerbs: [
           {

@@ -25,6 +25,7 @@ export interface Section {
   list?: ListItem[];
   examples?: { q: string; a: string }[];
   examples_simple?: string[];
+  subsections?: Section[];
 }
 
 export interface Topic {
