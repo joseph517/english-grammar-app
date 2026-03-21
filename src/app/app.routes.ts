@@ -55,5 +55,10 @@ export const routes: Routes = [
         path: 'imperatives',
         loadComponent: () =>
             import('./features/imperative/imperative.component').then(m => m.ImperativeComponent)
+    },
+    {
+        path: 'when-clauses',
+        loadComponent: () =>
+            import('./features/when-clauses/when-clauses.component').then(m => m.WhenClausesComponent)
     }
 ];
