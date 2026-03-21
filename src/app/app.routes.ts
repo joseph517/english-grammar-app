@@ -35,5 +35,15 @@ export const routes: Routes = [
         path: 'vocabulary',
         loadComponent: () =>
             import('./features/vocabulary/vocabulary.component').then(m => m.VocabularyComponent)
+    },
+    {
+        path: 'verb-infinitive',
+        loadComponent: () =>
+            import('./features/verb-infinitive/verb-infinitive.component').then(m => m.VerbInfinitiveComponent)
+    },
+    {
+        path: 'how-often',
+        loadComponent: () =>
+            import('./features/how-often/how-often.component').then(m => m.HowOftenComponent)
     }
 ];
