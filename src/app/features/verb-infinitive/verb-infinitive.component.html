@@ -1,0 +1,35 @@
+<div class="topic-page">
+
+  <!-- Header -->
+  <div class="topic-header">
+    <span class="topic-icon">{{ topic?.icon }}</span>
+    <h2>{{ topic?.title }}</h2>
+    <p>{{ topic?.subtitle }}</p>
+    <div class="topic-badges">
+      <span class="badge badge--count">{{ topic?.sections?.length }} sections</span>
+    </div>
+  </div>
+
+  <!-- Sections -->
+  @for (section of topic?.sections; track section.heading) {
+    <div class="section-card">
+      <h3>{{ section.heading }}</h3>
+      <div class="section-content">{{ section.content }}</div>
+
+      @if (section.table) {
+        <app-grammar-table
+          [data]="section.table"
+        />
+      }
+
+      @if (section.examples_simple) {
+        <ul class="simple-list">
+          @for (note of section.examples_simple; track note) {
+            <li>{{ note }}</li>
+          }
+        </ul>
+      }
+    </div>
+  }
+
+</div>
