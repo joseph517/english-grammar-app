@@ -65,5 +65,10 @@ export const routes: Routes = [
         path: 'can-could',
         loadComponent: () =>
             import('./features/can-could/can-could.component').then(m => m.CanCouldComponent)
+    },
+    {
+        path: 'because-so',
+        loadComponent: () =>
+            import('./features/because-so/because-so.component').then(m => m.BecauseSoComponent)
     }
 ];
